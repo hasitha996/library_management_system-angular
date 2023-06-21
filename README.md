@@ -10,7 +10,9 @@ Setup Font end
 1 run npm install on cmd
 2  run  ng serve --open   for open
 
+
 **Backend Setup 
+
 1 Run composer install for downlod vendor files 
 2 create env file and  setup database settings 
 3 run php artisan migrate to create tables
