@@ -44,8 +44,8 @@ export class BooksComponent implements OnInit {
     headers.append('Accept', 'application/json');
 
     data.append('image', this.selectedFile);
-    data.append('book_name', form.value.bookName);
-    data.append('category_id', form.value.categoryId);
+    data.append('bookName', form.value.bookName);
+    data.append('categoryId', form.value.categoryId);
     data.append('note', form.value.note);
     data.append('author_id', userObj.id);
 
