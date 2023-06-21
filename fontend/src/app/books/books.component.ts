@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/services/authentication.service';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-books',
@@ -9,33 +10,54 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
   styleUrls: ['./books.component.css']
 })
 export class BooksComponent implements OnInit {
-  
+
   errors = {
-    bookName:null,
-    categoryId:null,
-    image:null,
-    note:null,
+    bookName: null,
+    categoryId: null,
+    note: null,
   }
-  constructor(private auth:AuthenticationService, private router:Router) { }
+  selectedFile: any;
+
+  constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
   }
-  onSubmit(form:NgForm){
-    const book_name = form.value.bookName;
-    const category_id = form.value.categoryId;
-    const upimage = form.value.image;
-    const nnote = form.value.note;
 
-    this.auth.saveBook(book_name,category_id,upimage,nnote).subscribe((res)=>{
-       console.log(res);
-       // redirect to home
-      // this.router.navigate(['']);
-    },
-    (err)=>{
-      this.errors = err.error.errors;
-      // console.log(err.error.errors);
-    })
+  onFileSelect(event: any) {
+    console.log(event);
+    this.selectedFile = event.target.files[0];
   }
-  
+
+
+  onSubmit(form: NgForm) {
+
+    var data = new FormData();
+    const user: any = localStorage.getItem('user');
+    const userObj = JSON.parse(user);
+    const token = userObj.token;
+
+    const headers = new HttpHeaders({
+      Authorization: `Bearer ${token}`,
+    });
+
+    headers.append('Content-Type', 'multipart/form-data');
+    headers.append('Accept', 'application/json');
+
+    data.append('image', this.selectedFile);
+    data.append('book_name', form.value.bookName);
+    data.append('category_id', form.value.categoryId);
+    data.append('note', form.value.note);
+    data.append('author_id', userObj.id);
+
+    /* Image Post Request */
+    this.http.post('http://localhost:8000/api/save_book', data, {
+      headers: headers
+    }).subscribe(data => {
+      console.log('uplod done');
+
+    });
+
+  }
+
 
 }

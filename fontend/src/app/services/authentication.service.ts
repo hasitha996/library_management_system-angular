@@ -118,25 +118,7 @@ export class AuthenticationService {
     return this.http.get<HttpResponse<any>>(url, { observe: 'response' });
   }
 
-  // save book 
-  saveBook(book_name:string, category_id:string, upimage:string, nnote:string){
-   
-    const user: any = localStorage.getItem('user');
-    const userObj = JSON.parse(user);
-    const token = userObj.token;
-    const headers = new HttpHeaders({
-      Authorization: `Bearer ${token}`,
-    });
-    
-    const data={
-      book_name:book_name,
-      category_id:category_id,
-      author_id:userObj.id,
-      upimage:upimage,
-      nnote:nnote,
-    }
-
-    return this.http.post('http://localhost:8000/api/save_book',{data:data}, {headers:headers});
-  }
+ 
+  
 
 }

@@ -1,10 +1,10 @@
 <div class="d-flex justify-content-center align-items-center mt-5 ">
 
     <div class="text-center pt-5">
-        <img src="https://i.ibb.co/8cDgdFX/Logo.png" alt="network-logo" width="72" height="72" />
+       
         <h2>Books Adding</h2>
         <p>
-            Add youre books .
+            Add your books .
         </p>
     </div>
 
@@ -14,7 +14,7 @@
             <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
                 <div class="form-group">
                     <label for="inputName">Book Name</label>
-                    <input type="text" class="form-control" id="inputName" name="bookName" placeholder="Your  book name"
+                    <input type="text" class="form-control" id="inputName" name="bookName" placeholder="book name"
                     ngModel  required />
 
                 </div>
@@ -36,7 +36,7 @@
 
                 <div class="form-group">
                     <label class="form-label" for="customFile">Upload Image</label>
-                    <input type="file" class="form-control" id="customFile"  name="image" ngModel />
+                    <input type="file" name="profile" (change)="onFileSelect($event)" ngModel />
                 </div>
                 <div class="form-group">
                     <label for="textAreaRemark">Notes</label>
