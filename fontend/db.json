@@ -1,0 +1,102 @@
+{
+  "Cars": [
+    {
+      "id": 1,
+      "name": "Honda Civic Sedan LX",
+      "author": 2023,
+      "imageURL": "https://imgd.aeplcdn.com/642x336/n/2hiabsa_1459840.jpg?q=75",
+      "category": "Red"
+    },
+    {
+      "id": 2,
+      "name": "Honda Passport Elite",
+      "author": 2023,
+      "imageURL": "https://imgd.aeplcdn.com/642x336/n/2hiabsa_1459840.jpg?q=75",
+      "category": "Black"
+    },
+    {
+      "id": 3,
+      "name": "Honda Ridgeline Sport",
+      "author": 2023,
+      "imageURL": "https://imagizer.imageshack.com/img922/7028/psilWB.jpg",
+      "category": "White"
+    },
+    {
+      "id": 4,
+      "name": "Bentley Bentayga AWD AWD Automatic",
+      "author": 2023,
+      "imageURL": "https://stimg.cardekho.com/images/car-images/large/Bentley/Bentayga/7891/1676963618698/229_Apple-Green_529041.jpg",
+      "category": "Green"
+    },
+    {
+      "id": 5,
+      "name": "Bentley Flying Spur Mulliner W12 AWD Automatic",
+      "author": 2022,
+      "imageURL": "https://imgd-ct.aeplcdn.com/1056x660/n/cheu9sa_1464215.jpg?q=75",
+      "category": "white"
+    },
+    {
+      "id": 6,
+      "name": "Bentley Flying Spur Mulliner W12 AWD Automatic",
+      "author": 2023,
+      "imageURL": "https://imgd-ct.aeplcdn.com/1056x660/n/cheu9sa_1464215.jpg?q=75",
+      "category": "white"
+    },
+    {
+      "id": 7,
+      "name": "Kia Forte GT-Line",
+      "author": 2023,
+      "imageURL": "https://dealer-content.s3.amazonaws.com/images/models/kia/2021/forte/categorys/currant-red.png",
+      "category": "Red"
+    },
+    {
+      "id": 8,
+      "name": "Kia Sportage EX",
+      "author": 2022,
+      "imageURL": "https://cdn-ds.com/blogs-media/sites/518/2020/08/15100827/2021-Kia-Sportage-Black-Cherry_o.png",
+      "category": "Black"
+    },
+    {
+      "id": 9,
+      "name": "Kia Telluride SX Prestige X-Pro",
+      "author": 2023,
+      "imageURL": "https://s3.us-east-2.amazonaws.com/dealer-inspire-vps-vehicle-images/stock-images/chrome/fa80ce695446aa63f26136280f5a82e1.png",
+      "category": "White"
+    },
+    {
+      "id": 10,
+      "name": "BMW X3",
+      "author": 2022,
+      "imageURL": "https://images.jdmagicbox.com/quickquotes/images_main/bmw-x3-xdrive30i-sportx-bs6-petrol-metallic-black-sapphire-222560398-axz9b.png",
+      "category": "Black"
+    },
+    {
+      "id": 11,
+      "name": "BMW 4 Series",
+      "author": 2023,
+      "imageURL": "https://cdn.bmwblog.com/wp-content/uploads/2020/09/BMW-4-Series-Coupe-G22-featured-in-San-Remo-Green-metallic-1.png",
+      "category": "Green"
+    },
+    {
+      "id": 12,
+      "name": "Ford Explorer",
+      "author": 2022,
+      "imageURL": "https://www.autotrader.com/wp-content/uploads/2021/03/2021-ford-explorer-king-ranch.jpg?w=1024",
+      "category": "white"
+    },
+    {
+      "id": 13,
+      "name": " Ford Super Duty",
+      "author": 2023,
+      "imageURL": "https://blogmedia.dealerfire.com/wp-content/uploads/sites/275/2016/11/What-are-the-categorys-offered-on-the-2017-Ford-Super-Duty-Brandon-Ford-2017-Ford-Super-Duty-Shadow-Black_o.png",
+      "category": "Black"
+    },
+    {
+      "id": 14,
+      "name": "Ford Bronco",
+      "author": 2023,
+      "imageURL": "https://www.cnet.com/a/img/resize/0c803cfac5e863d6dc97441feba4184bc34d2ef6/hub/2021/08/23/01a131b9-1470-4c26-b4db-abe581edb22c/ford-bronco-eruption-green-2022-8.jpg?auto=webp&width=1200",
+      "category": "Green"
+    }
+  ]
+}

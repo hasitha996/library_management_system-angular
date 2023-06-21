@@ -1,0 +1,56 @@
+<div class="d-flex justify-content-center align-items-center mt-5 ">
+
+    <div class="text-center pt-5">
+        <img src="https://i.ibb.co/8cDgdFX/Logo.png" alt="network-logo" width="72" height="72" />
+        <h2>Books Adding</h2>
+        <p>
+            Add youre books .
+        </p>
+    </div>
+
+    <div class="card col-md-5">
+
+        <div class="card-body ">
+            <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+                <div class="form-group">
+                    <label for="inputName">Book Name</label>
+                    <input type="text" class="form-control" id="inputName" name="bookName" placeholder="Your  book name"
+                    ngModel  required />
+
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="textAreaRemark">Category -</label>
+                        <select class="selectpicker" name="categoryId" ngModel>
+                            <option value="1">Advanture</option>
+                            <option value="2">Novel</option>
+                            <option value="3">kids</option>
+                        </select>
+
+                    </div>
+                </div>
+
+                <hr />
+
+
+                <div class="form-group">
+                    <label class="form-label" for="customFile">Upload Image</label>
+                    <input type="file" class="form-control" id="customFile"  name="image" ngModel />
+                </div>
+                <div class="form-group">
+                    <label for="textAreaRemark">Notes</label>
+                    <textarea class="form-control" name="note" id="textAreaRemark" rows="2"
+                        placeholder="Tell us you want more..." ngModel></textarea>
+                </div>
+                <!-- End Input Remark -->
+
+                <!-- Start Submit Button -->
+                <button class="btn btn-primary btn-block col-lg-2" type="submit">Submit</button>
+                <!-- End Submit Button -->
+            </form>
+            <!-- End Form -->
+        </div>
+        <!-- End Card Body -->
+    </div>
+</div>

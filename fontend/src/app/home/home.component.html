@@ -1,0 +1,59 @@
+
+  <div style="margin: 15px">
+    <div style="display: flex">
+      <mat-form-field appearance="fill" class="example-form-field">
+        <mat-label> -Sorting- </mat-label>
+        <mat-select [formControl]="sortOrderControl">
+          <mat-option value="">-select-</mat-option>     
+          <mat-option value="id-by-asc">Id By Asc</mat-option>
+          <mat-option value="year-by-asc">Author By Asc</mat-option>
+          <mat-option value="year-by-asc">Category By Asc</mat-option>
+    
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="example-form-field">
+        <mat-label>Search By Book Name</mat-label>
+        <input matInput type="text" [formControl]="searchKey" (keydown.enter)="searchByName()" />
+        <button
+          matSuffix
+          mat-icon-button
+          aria-label="Clear"
+          (click)="searchByName()"
+        >
+          <mat-icon>search</mat-icon>
+        </button>
+      </mat-form-field>
+      <div class="example-form-field">
+        <mat-paginator
+          [length]="totalRecords"
+          [pageSize]="pageSize"
+          [pageSizeOptions]="[5, 10, 15]"
+          [pageIndex]="pageIndex"
+          aria-label="Select page"
+          (page)="handlePageEvent($event)"
+        >
+        </mat-paginator>
+      </div>
+    </div>
+    <div class="my-container-wrap">
+      <mat-card class="example-card" *ngFor="let item of books">
+        <mat-card-header>
+          <mat-card-title>{{ item.name }}</mat-card-title>
+          <button
+            mat-mini-fab
+            matTooltip="Primary"
+            color="primary"
+            aria-label="Example mini fab with a heart icon"
+          >
+            {{ item.id }}
+          </button>
+        </mat-card-header>
+        <img mat-card-image src="{{ item.imageURL }}" />
+        <mat-card-content>
+          <p>Auther: {{ item.author }}</p>
+          <p>Catgory: {{ item.category }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  
