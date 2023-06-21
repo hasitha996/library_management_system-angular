@@ -70,6 +70,7 @@ export class HomeComponent implements OnInit {
       .getList(sortColumn, sortType, searchKey,(currentPage + 1), pageSize)
       .subscribe((response) => {
         this.books = response.body as book[];
+        
         this.totalRecords = response.headers.get('X-Total-Count')
           ? Number(response.headers.get('X-Total-Count'))
           : 0;
